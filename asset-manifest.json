@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cosmic-explorer/static/css/main.4c30af16.css",
-    "main.js": "/cosmic-explorer/static/js/main.17fc3f7d.js",
+    "main.js": "/cosmic-explorer/static/js/main.a9456a88.js",
     "static/media/planet-mercury-geology.png": "/cosmic-explorer/static/media/planet-mercury-geology.aa6732c318454e3fc480.png",
     "static/media/planet-venus-geology.png": "/cosmic-explorer/static/media/planet-venus-geology.484f9dacbeb3b555ffba.png",
     "static/media/planet-mars-geology.png": "/cosmic-explorer/static/media/planet-mars-geology.d3ffce8e1e9b9bc5df60.png",
@@ -30,10 +30,10 @@
     "static/media/planet-mercury.svg": "/cosmic-explorer/static/media/planet-mercury.1fce205c50f4657418d4562ca24b008a.svg",
     "index.html": "/cosmic-explorer/index.html",
     "main.4c30af16.css.map": "/cosmic-explorer/static/css/main.4c30af16.css.map",
-    "main.17fc3f7d.js.map": "/cosmic-explorer/static/js/main.17fc3f7d.js.map"
+    "main.a9456a88.js.map": "/cosmic-explorer/static/js/main.a9456a88.js.map"
   },
   "entrypoints": [
     "static/css/main.4c30af16.css",
-    "static/js/main.17fc3f7d.js"
+    "static/js/main.a9456a88.js"
   ]
 }
