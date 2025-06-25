@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cosmic-explorer/static/css/main.4c30af16.css",
-    "main.js": "/cosmic-explorer/static/js/main.431447b1.js",
+    "main.css": "/cosmic-explorer/static/css/main.2bbf2a0c.css",
+    "main.js": "/cosmic-explorer/static/js/main.d18aec6e.js",
     "static/media/planet-mercury-geology.png": "/cosmic-explorer/static/media/planet-mercury-geology.aa6732c318454e3fc480.png",
     "static/media/planet-venus-geology.png": "/cosmic-explorer/static/media/planet-venus-geology.484f9dacbeb3b555ffba.png",
     "static/media/planet-mars-geology.png": "/cosmic-explorer/static/media/planet-mars-geology.d3ffce8e1e9b9bc5df60.png",
@@ -23,17 +23,17 @@
     "static/media/planet-saturn.svg": "/cosmic-explorer/static/media/planet-saturn.801f886ad467514e2c016ac7c4bfa271.svg",
     "static/media/planet-venus-internal.svg": "/cosmic-explorer/static/media/planet-venus-internal.1a94aa02c54e1742e5c53e0a2ae9056b.svg",
     "static/media/planet-venus.svg": "/cosmic-explorer/static/media/planet-venus.db5a344418797845ce8f0924814a193b.svg",
+    "static/media/iss.svg": "/cosmic-explorer/static/media/iss.257b0d7fc743ccf686a28f5889e289bd.svg",
     "static/media/planet-mars-internal.svg": "/cosmic-explorer/static/media/planet-mars-internal.d867ac804b24a57bcc34c60ca5c634c8.svg",
     "static/media/planet-mars.svg": "/cosmic-explorer/static/media/planet-mars.f9dc1ca45a888b568829cd38ca525dcb.svg",
-    "static/media/iss.svg": "/cosmic-explorer/static/media/iss.fce2ed9d0fae76fed8af9e6805eb1a0c.svg",
     "static/media/planet-mercury-internal.svg": "/cosmic-explorer/static/media/planet-mercury-internal.d1be143201898fac437968baae616e6b.svg",
     "static/media/planet-mercury.svg": "/cosmic-explorer/static/media/planet-mercury.1fce205c50f4657418d4562ca24b008a.svg",
     "index.html": "/cosmic-explorer/index.html",
-    "main.4c30af16.css.map": "/cosmic-explorer/static/css/main.4c30af16.css.map",
-    "main.431447b1.js.map": "/cosmic-explorer/static/js/main.431447b1.js.map"
+    "main.2bbf2a0c.css.map": "/cosmic-explorer/static/css/main.2bbf2a0c.css.map",
+    "main.d18aec6e.js.map": "/cosmic-explorer/static/js/main.d18aec6e.js.map"
   },
   "entrypoints": [
-    "static/css/main.4c30af16.css",
-    "static/js/main.431447b1.js"
+    "static/css/main.2bbf2a0c.css",
+    "static/js/main.d18aec6e.js"
   ]
 }
