@@ -2,7 +2,7 @@
   "name": "cosmic-explorer",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/abrukhanska/CosmicExplorer.git",
+  "homepage": "https://abrukhanska.github.io/CosmicExplorer",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
