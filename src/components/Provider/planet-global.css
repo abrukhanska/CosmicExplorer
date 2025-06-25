@@ -1,0 +1,62 @@
+.planet-theme-root,
+.planet-theme-root * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.planet-theme-root html:focus-within {
+    scroll-behavior: smooth;
+}
+.planet-theme-root ul,
+.planet-theme-root ol {
+    list-style: none;
+}
+.planet-theme-root a {
+    text-decoration: none;
+    color: inherit;
+}
+.planet-theme-root {
+    font-family: 'Spartan', Arial, sans-serif;
+    font-size: 16px;
+    counter-reset: planet-tab;
+    background: hsl(240, 67%, 8%);
+}
+.planet-theme-root body,
+.planet-theme-root {
+    font-size: 0.875rem;
+}
+.planet-theme-root {
+    --color-white: hsl(0, 0%, 100%);
+    --color-white-alpha-50: hsla(0, 0%, 100%, 0.5);
+    --color-white-alpha-75: hsla(0, 0%, 100%, 0.75);
+    --color-black: hsl(240, 67%, 8%);
+    --color-gray-dark: hsl(240, 17%, 26%);
+    --color-gray-light: hsl(240, 6%, 54%);
+    --color-turquoise: hsl(194, 48%, 49%);
+    --color-orange-light: hsl(33, 82%, 61%);
+    --color-orange-dark: hsl(10, 63%, 51%);
+    --color-purple: hsl(263, 67%, 51%);
+    --color-red-light: hsl(2, 68%, 53%);
+    --color-red-dark: hsl(17, 73%, 46%);
+    --color-green: hsl(169, 73%, 44%);
+    --color-blue: hsl(222, 87%, 56%);
+    --font-main: 'Spartan', Arial, sans-serif;
+    --font-title: 'Antonio', Arial, sans-serif;
+}
+@media (prefers-reduced-motion: reduce) {
+    .planet-theme-root html:focus-within {
+        scroll-behavior: auto;
+    }
+    .planet-theme-root,
+    .planet-theme-root * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+@media (max-width: 480px) {
+    .planet-theme-root {
+        font-size: 14px;
+    }
+}

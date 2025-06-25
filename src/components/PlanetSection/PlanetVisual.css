@@ -1,0 +1,95 @@
+.visual-outer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+    max-height: 350px;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    .visual-outer { max-height: 460px; }
+}
+@media (min-width: 1025px) {
+    .visual-outer { max-height: 754px; }
+}
+
+.visual-img {
+    position: relative;
+    border-radius: 50%;
+    background-image: var(--main-img);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: var(--img-mobile, 320px);
+    width: var(--img-mobile, 320px);
+    margin: 0 auto;
+    transition: width 0.3s, height 0.3s;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    filter: brightness(0.88) saturate(0.85);
+    opacity: 0.93;
+    z-index: 3;
+}
+
+@media (min-width: 768px) {
+    .visual-img {
+        width: var(--img-tablet, 400px);
+        height: var(--img-tablet, 400px);
+    }
+}
+@media (min-width: 1025px) {
+    .visual-img {
+        width: var(--img-desktop, 550px);
+        height: var(--img-desktop, 550px);
+    }
+}
+
+.geo-drop {
+    position: absolute;
+    left: 50%;
+    top: 68%;
+    width: 90px;
+    height: 90px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(-50%, 0);
+    pointer-events: none;
+    z-index: 2;
+}
+
+@media (min-width: 768px) {
+    .geo-drop {
+        width: 120px;
+        height: 120px;
+        top: 68%;
+    }
+}
+@media (min-width: 1025px) {
+    .geo-drop {
+        width: 170px;
+        height: 170px;
+        top: 68%;
+    }
+}
+
+.swapping {
+    animation: swapAnim 2s ease;
+}
+@keyframes swapAnim {
+    0% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+    50% {
+        opacity: 0;
+        transform: scale(0.5) rotate(180deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}

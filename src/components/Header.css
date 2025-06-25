@@ -1,0 +1,510 @@
+.cosmic-navbar-shadow {
+    box-shadow: 0 2px 8px #18182933;
+    width: 100%;
+    background: none;
+    margin: 0;
+    padding: 0;
+    z-index: 1002;
+}
+.cosmic-navbar {
+    background: #181828 !important;
+    border-radius: 0 !important;
+    border: none !important;
+    width: 100%;
+    padding: 0 !important;
+    min-height: 60px;
+    height: 60px;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+}
+.cosmic-navbar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    padding: 0 18px;
+    min-height: 60px;
+    height: 60px;
+    min-width: 0;
+}
+.cosmic-navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+    font-size: 1.18rem;
+    font-weight: 600;
+    color: #fff !important;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.cosmic-navbar-logo-text {
+    color: inherit;
+    transition: color 0.2s;
+    display: inline-block;
+}
+.cosmic-navbar-nav {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    gap: 1.6rem;
+    min-width: 0;
+    max-width: 60vw;
+    flex-shrink: 1;
+    flex: 0 1 auto;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    -ms-overflow-style: none;
+}
+.cosmic-navbar-nav::-webkit-scrollbar {
+    display: none;
+}
+.cosmic-navbar-link {
+    color: #fff !important;
+    font-weight: 500;
+    padding: 0.32em 1.3em;
+    border-radius: 999px;
+    font-size: 1.08em;
+    background: none;
+    transition: color 0.2s, background 0.18s, border 0.18s;
+    text-decoration: none;
+    position: relative;
+    box-shadow: none;
+    white-space: nowrap;
+    min-width: max-content;
+    max-width: none;
+    overflow: visible;
+    text-overflow: unset;
+    flex-shrink: 0;
+    border: 2px solid transparent;
+}
+.cosmic-navbar-link.active,
+.cosmic-navbar-link:focus,
+.cosmic-navbar-link:hover {
+    color: #20e3b2 !important;
+    background: #23233b;
+    border: 2px solid #20e3b2;
+    outline: none;
+    z-index: 2;
+}
+.cosmic-navbar-nav > .cosmic-navbar-link:last-child {
+    margin-right: 1.1rem;
+}
+.cosmic-navbar-actions {
+    display: flex !important;
+    align-items: center;
+    gap: 1rem;
+    min-width: 0;
+    flex-shrink: 1;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    margin-left: 1.5rem;
+    margin-right: 0.6rem;
+}
+.cosmic-navbar-nav + .cosmic-navbar-actions {
+    margin-left: 0 !important;
+}
+
+.cosmic-navbar-actions .search-input-wrapper,
+.cosmic-navbar-nav-mobile .search-input-wrapper {
+    min-width: 220px;
+    max-width: 270px;
+    width: 230px;
+    flex: 0 0 230px;
+    margin-left: 0 !important;
+    border-radius: 2em;
+    background: #23233b;
+    border: none !important;
+    box-shadow: 0 0 0 2px #a37fe3, 0 0 8px 0 #a37fe399;
+    transition: box-shadow 0.18s;
+}
+.cosmic-navbar-actions .search-input-wrapper:focus-within,
+.cosmic-navbar-nav-mobile .search-input-wrapper:focus-within {
+    box-shadow: 0 0 0 3px #20e3b2, 0 0 12px 0 #20e3b299;
+}
+
+.cosmic-navbar-btn,
+.cosmic-navbar-btn-glow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    border-radius: 999px !important;
+    font-weight: 600;
+    padding: 0.52em 1.5em;
+    font-size: 1.04em;
+    line-height: 1.2;
+    border: 2px solid transparent;
+    background: linear-gradient(90deg, #5a97f8 0%, #20e3b2 100%) !important;
+    color: #fff !important;
+    box-shadow: none;
+    transition: border 0.18s, background 0.18s, color 0.18s;
+    outline: none;
+    min-width: 0;
+    max-width: none;
+    overflow: visible;
+    text-overflow: unset;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+.cosmic-navbar-btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.cosmic-navbar-btn-icon svg {
+    display: block;
+    vertical-align: middle;
+    font-size: 1.1em;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.cosmic-navbar-btn:focus,
+.cosmic-navbar-btn:hover,
+.cosmic-navbar-btn:active,
+.cosmic-navbar-btn-glow:focus,
+.cosmic-navbar-btn-glow:hover,
+.cosmic-navbar-btn-glow:active {
+    border: 2px solid #20e3b2;
+    background: linear-gradient(100deg, #20e3b2 0%, #5a97f8 100%) !important;
+}
+
+.cosmic-navbar-btn[aria-label="Вийти"] {
+    width: 36px !important;
+    height: 36px !important;
+    padding: 0 !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-width: 36px !important;
+    max-height: 36px !important;
+    border-radius: 50% !important;
+    border: 2px solid transparent;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: linear-gradient(90deg, #5a97f8 0%, #20e3b2 100%) !important;
+    box-shadow: none !important;
+    transition: border 0.18s, background 0.18s !important;
+    color: #fff !important;
+    margin-left: 0.5rem !important;
+    font-size: 1.3rem !important;
+    overflow: hidden !important;
+}
+.cosmic-navbar-btn[aria-label="Вийти"] .cosmic-navbar-btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    height: 100%;
+}
+.cosmic-navbar-btn[aria-label="Вийти"] .cosmic-navbar-btn-icon svg {
+    display: block;
+    margin: 0 auto !important;
+    font-size: 1.3em !important;
+    line-height: 1 !important;
+    position: static !important;
+    vertical-align: middle !important;
+}
+.cosmic-navbar-btn-circle {
+    width: 36px !important;
+    height: 36px !important;
+    padding: 0 !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-width: 36px !important;
+    max-height: 36px !important;
+    border-radius: 50% !important;
+    border: 2px solid transparent;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: linear-gradient(90deg, #5a97f8 0%, #20e3b2 100%) !important;
+    box-shadow: none !important;
+    color: #fff !important;
+    margin-left: 0.5rem !important;
+    font-size: 1rem !important;
+    overflow: hidden !important;
+    transition: border 0.18s, background 0.18s !important;
+}
+.cosmic-navbar-btn-circle:focus,
+.cosmic-navbar-btn-circle:hover,
+.cosmic-navbar-btn-circle:active {
+    border: 2px solid #20e3b2;
+    background: linear-gradient(100deg, #20e3b2 0%, #5a97f8 100%) !important;
+}
+
+@media (max-width: 1400px) {
+    .cosmic-navbar-link { padding: 0.17em 0.5em; font-size: 0.95em; }
+    .cosmic-navbar-actions .search-input-wrapper { max-width: 160px; }
+    .cosmic-navbar-nav { max-width: 45vw; }
+}
+@media (max-width: 1200px) {
+    .cosmic-navbar-nav { max-width: 38vw; }
+}
+@media (max-width: 991.98px) {
+    .cosmic-navbar-actions .search-input-wrapper,
+    .cosmic-navbar-actions input[type="text"],
+    .cosmic-navbar-actions input[type="search"] {
+        min-width: 0;
+        max-width: 95vw;
+        width: 100%;
+        flex: 1 1 90px;
+    }
+}
+@media (max-width: 600px) {
+    .cosmic-navbar-actions { gap: 0.3rem; }
+    .cosmic-navbar-actions .search-input-wrapper { min-width: 0; max-width: 100vw; }
+    .cosmic-navbar-btn { padding: 0.28em 0.8em; font-size: 0.95em; }
+    .cosmic-navbar-btn[aria-label="Вийти"] {
+        width: 30px;
+        height: 30px;
+        max-width: 30px;
+        max-height: 30px;
+        font-size: 1em;
+    }
+}
+
+.cosmic-navbar-offcanvas .offcanvas-header,
+.cosmic-navbar-offcanvas .offcanvas-body {
+    background: #181828;
+    color: #fff;
+}
+.cosmic-navbar-nav-mobile {
+    gap: 0.5rem;
+}
+.cosmic-navbar-nav-mobile .search-input-wrapper,
+.cosmic-navbar-nav-mobile input[type="text"],
+.cosmic-navbar-nav-mobile input[type="search"] {
+    min-width: 0;
+    max-width: 98vw;
+    width: 100%;
+    flex: 1 1 80px;
+    border-radius: 2em;
+    background: #23233b;
+    border: none !important;
+    box-shadow: 0 0 0 2px #20e3b2, 0 0 8px 0 #20e3b299;
+    transition: box-shadow 0.18s;
+}
+.cosmic-navbar-nav-mobile .search-input-wrapper:focus-within {
+    box-shadow: 0 0 0 3px #20e3b2, 0 0 12px 0 #20e3b299;
+}
+.cosmic-navbar-offcanvas .offcanvas-header .offcanvas-title {
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+    font-size: 1.18rem;
+    font-weight: 600;
+    color: #fff !important;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+}
+.cosmic-navbar-offcanvas .offcanvas-header .cosmic-navbar-logo-text {
+    margin-left: 0.5em !important;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+}
+.cosmic-navbar-nav-mobile .cosmic-navbar-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border: 2px solid transparent;
+}
+.cosmic-navbar-nav-mobile .cosmic-navbar-link.active,
+.cosmic-navbar-nav-mobile .cosmic-navbar-link:focus,
+.cosmic-navbar-nav-mobile .cosmic-navbar-link:hover {
+    color: #20e3b2 !important;
+    background: #23233b;
+    border: 2px solid #20e3b2;
+    outline: none;
+    z-index: 2;
+    text-align: center;
+    justify-content: center;
+}
+.cosmic-navbar-offcanvas .offcanvas-body .cosmic-navbar-nav-mobile {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+.cosmic-navbar-offcanvas .offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cosmic-burger-btn {
+    background: none !important;
+    border: none;
+    box-shadow: none;
+    padding: 0.15em 0.15em;
+    margin-left: auto;
+    outline: none;
+    z-index: 1030;
+    cursor: pointer;
+}
+.cosmic-burger-btn:focus,
+.cosmic-burger-btn:hover {
+    background: none !important;
+    outline: none;
+    box-shadow: none;
+}
+button.cosmic-close-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-left: 1.2em;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button.cosmic-close-btn:focus,
+button.cosmic-close-btn:hover {
+    background: none;
+    outline: none;
+    filter: drop-shadow(0 0 4px #20e3b2);
+}
+.cosmic-navbar-offcanvas .cosmic-navbar-actions-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.1em;
+    margin-top: 0.7em;
+    margin-bottom: 0.5em;
+}
+.cosmic-navbar-offcanvas .cosmic-navbar-btn {
+    min-width: 120px;
+    justify-content: center;
+    font-size: 1.02em;
+    padding: 0.46em 1.2em;
+    border: 2px solid transparent;
+}
+.cosmic-navbar-offcanvas .cosmic-navbar-btn:focus,
+.cosmic-navbar-offcanvas .cosmic-navbar-btn:hover,
+.cosmic-navbar-offcanvas .cosmic-navbar-btn:active {
+    border: 2px solid #20e3b2;
+}
+@media (max-width: 400px) {
+    .cosmic-navbar-offcanvas .cosmic-navbar-actions-mobile {
+        flex-direction: column;
+        gap: 0.55em;
+    }
+}
+.cosmic-offcanvas-header-fake {
+    position: absolute;
+    z-index: 3001;
+    top: 13px;
+    right: 16px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    pointer-events: none;
+}
+.cosmic-offcanvas-header-fake .cosmic-close-btn {
+    pointer-events: all;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: filter 0.16s;
+}
+.cosmic-offcanvas-header-fake .cosmic-close-btn:focus,
+.cosmic-offcanvas-header-fake .cosmic-close-btn:hover {
+    filter: drop-shadow(0 0 8px #20e3b2);
+}
+.cosmic-navbar-btn[aria-label="Вийти"] {
+    width: 36px !important;
+    height: 36px !important;
+    padding: 0 !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-width: 36px !important;
+    max-height: 36px !important;
+    border-radius: 50% !important;
+    border: 2px solid transparent;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: linear-gradient(90deg, #5a97f8 0%, #20e3b2 100%) !important;
+    box-shadow: none !important;
+    transition: border 0.18s, background 0.18s !important;
+    color: #fff !important;
+    margin-left: 0.5rem !important;
+    font-size: 1rem !important;
+    overflow: hidden !important;
+}
+.cosmic-navbar-btn[aria-label="Вийти"]:hover,
+.cosmic-navbar-btn[aria-label="Вийти"]:focus,
+.cosmic-navbar-btn[aria-label="Вийти"]:active {
+    border: 2px solid #20e3b2 !important;
+    background: linear-gradient(100deg, #20e3b2 0%, #5a97f8 100%) !important;
+}
+@media (max-width: 600px) {
+    .cosmic-navbar-btn[aria-label="Вийти"] {
+        width: 30px !important;
+        height: 30px !important;
+        max-width: 30px !important;
+        max-height: 30px !important;
+        font-size: 1em !important;
+    }
+}
+.cosmic-navbar-actions-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.1em;
+    margin-top: 0.7em;
+    margin-bottom: 0.5em;
+    align-items: center;
+}
+@media (max-width: 400px) {
+    .cosmic-navbar-actions-mobile {
+        flex-direction: column;
+        gap: 0.55em;
+    }
+}
+.cosmic-navbar-actions .search-input-wrapper,
+.cosmic-navbar-nav-mobile .search-input-wrapper {
+    min-width: 220px;
+    max-width: 270px;
+    width: 230px;
+    flex: 0 0 230px;
+    margin-left: 0 !important;
+    border-radius: 2em;
+    background: #23233b;
+    border: none !important;
+    box-shadow: 0 0 0 2px #a37fe3, 0 0 8px 0 #a37fe399;
+    transition: box-shadow 0.18s;
+}
+.cosmic-navbar-actions .search-input-wrapper:focus,
+.cosmic-navbar-actions .search-input-wrapper:active,
+.cosmic-navbar-actions .search-input-wrapper:focus-within,
+.cosmic-navbar-actions .search-input-wrapper:hover,
+.cosmic-navbar-nav-mobile .search-input-wrapper:focus,
+.cosmic-navbar-nav-mobile .search-input-wrapper:active,
+.cosmic-navbar-nav-mobile .search-input-wrapper:focus-within,
+.cosmic-navbar-nav-mobile .search-input-wrapper:hover {
+    border: none !important;
+    box-shadow: 0 0 0 3px #a37fe3, 0 0 12px 0 #a37fe399;
+}

@@ -1,0 +1,328 @@
+:root {
+    --modal-bg: rgba(18, 23, 34, 0.78);
+    --modal-blur: 18px;
+    --modal-border: rgba(255,255,255,0.14);
+    --modal-border-glow: 0 0 18px 0 rgba(32,227,178,0.19);
+    --modal-cyan: #20e3b2;
+    --modal-cyan-soft: #7ee6d0;
+    --modal-blue: #3399ff;
+    --modal-white: #f5f8fa;
+    --modal-muted: #b9e6db;
+    --modal-btn-gradient: linear-gradient(90deg, #3399ff 0%, #20e3b2 100%);
+    --modal-btn-gradient-hover: linear-gradient(90deg, #20e3b2 0%, #3399ff 100%);
+}
+
+.calendar-modal .modal-content {
+    background: var(--modal-bg) !important;
+    backdrop-filter: blur(var(--modal-blur));
+    border-radius: 16px !important;
+    border: 1.5px solid var(--modal-border) !important;
+    box-shadow: var(--modal-border-glow), 0 4px 32px 0 rgba(32,227,178,0.08) !important;
+    font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+    color: var(--modal-white);
+    position: relative;
+    padding: 22px 20px 22px 20px;
+    min-width: 320px;
+    min-height: 145px;
+    max-width: 96vw;
+    max-height: 96vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible !important;
+}
+
+.calendar-modal-backdrop {
+    background: rgba(6, 8, 22, 0.43) !important;
+    backdrop-filter: blur(4px);
+}
+
+.calendar-modal .modal-title {
+    color: var(--modal-cyan-soft);
+    font-size: 1.18rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    text-shadow: 0 2px 12px rgba(32,227,178,0.13);
+    margin-bottom: 1.1em;
+    text-align: center;
+}
+
+.calendar-modal .btn-close {
+    color: var(--modal-cyan);
+    background: none;
+    border: none;
+    opacity: 0.75;
+    transition: opacity 0.16s;
+    font-size: 1.5em;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 10;
+}
+.calendar-modal .btn-close:hover,
+.calendar-modal .btn-close:focus {
+    opacity: 1;
+    filter: drop-shadow(0 0 6px var(--modal-cyan-soft));
+    outline: none;
+}
+
+.calendar-input-with-icon {
+    position: relative;
+    width: 100%;
+    max-width: 280px;
+}
+.calendar-input-with-icon .cosmic-datepicker {
+    padding-right: 2.6em !important;
+}
+.calendar-input-with-icon .calendar-icon {
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--modal-cyan-soft);
+    font-size: 1.25em;
+    pointer-events: none;
+    opacity: 0.88;
+}
+
+.calendar-modal .cosmic-datepicker,
+.calendar-modal .react-datepicker__input-container input {
+    background: rgba(34,40,55,0.80) !important;
+    color: var(--modal-white) !important;
+    border-radius: 10px !important;
+    border: 1.5px solid var(--modal-border) !important;
+    box-shadow: none !important;
+    font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+    font-size: 1.03em;
+    padding: 0.7em 2.6em 0.7em 1.1em !important;
+    outline: none !important;
+    transition: border 0.17s;
+    min-height: 36px;
+    margin-bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+.calendar-modal .cosmic-datepicker:focus,
+.calendar-modal .react-datepicker__input-container input:focus {
+    border: 1.5px solid var(--modal-cyan-soft) !important;
+}
+
+.calendar-modal .calendar-modal-btns {
+    display: flex;
+    gap: 13px;
+    justify-content: center;
+    margin-top: 0.5em;
+    flex-wrap: wrap;
+    padding: 0 1.2em 1.1em;
+}
+.calendar-modal .cosmic-btn {
+    font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.07em;
+    min-width: 68px;
+    min-height: 36px;
+    padding: 0.32em 1.2em;
+    border-radius: 1.5em;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: var(--modal-btn-gradient);
+    color: #fff !important;
+    box-shadow: 0 2px 8px 0 rgba(32,227,178,0.13);
+    transition: background 0.18s, color 0.15s, box-shadow 0.14s, filter 0.15s;
+    margin: 0;
+    text-shadow: 0 1px 6px rgba(255,255,255,0.13);
+    letter-spacing: 0.01em;
+}
+.calendar-modal .cosmic-btn--secondary {
+    background: none !important;
+    color: var(--modal-white) !important;
+    border: 1.5px solid var(--modal-border);
+    box-shadow: none;
+    text-shadow: none;
+}
+.calendar-modal .cosmic-btn:hover,
+.calendar-modal .cosmic-btn:focus {
+    background: var(--modal-btn-gradient-hover);
+    color: #fff !important;
+    box-shadow: 0 4px 16px 0 rgba(32,227,178,0.19);
+    filter: brightness(1.09);
+}
+.calendar-modal .cosmic-btn--secondary:hover,
+.calendar-modal .cosmic-btn--secondary:focus {
+    background: rgba(66,96,229,0.09) !important;
+    color: var(--modal-cyan-soft) !important;
+    border-color: var(--modal-cyan-soft);
+    filter: none;
+}
+
+.calendar-modal-popper {
+    z-index: 99999 !important;
+    min-width: 180px;
+    max-width: 250px;
+    width: max-content;
+    left: 0 !important;
+    right: auto !important;
+    font-size: 0.93em;
+}
+@media (max-width: 480px) {
+    .calendar-modal-popper {
+        min-width: 0;
+        max-width: 98vw;
+        width: 99vw;
+        font-size: 1em;
+    }
+}
+.calendar-modal-datepicker,
+.calendar-modal .react-datepicker,
+.calendar-modal .react-datepicker-popper {
+    background: rgba(18,23,34,0.98) !important;
+    border-radius: 10px !important;
+    border: 1.2px solid var(--modal-border) !important;
+    box-shadow: 0 4px 12px 0 rgba(32,227,178,0.07) !important;
+    color: var(--modal-cyan-soft) !important;
+    font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif !important;
+    font-size: 0.93em;
+    min-width: 180px;
+    max-width: 250px;
+    overflow: visible !important;
+    padding: 0 0 0.3em 0;
+}
+.calendar-modal .react-datepicker__header,
+.calendar-modal-datepicker .react-datepicker__header {
+    background: transparent !important;
+    border-bottom: 1px solid var(--modal-border) !important;
+    color: var(--modal-cyan) !important;
+    border-radius: 10px 10px 0 0;
+    padding: 0.7em 0 0.4em 0 !important;
+}
+.calendar-modal .react-datepicker__current-month,
+.calendar-modal .react-datepicker__day-name,
+.calendar-modal .react-datepicker__month-text,
+.calendar-modal-datepicker .react-datepicker__current-month,
+.calendar-modal-datepicker .react-datepicker__day-name,
+.calendar-modal-datepicker .react-datepicker__month-text {
+    color: var(--modal-muted) !important;
+    font-weight: 600;
+    font-size: 1em;
+    padding: 0.1em 0.05em;
+}
+.calendar-modal .react-datepicker__day,
+.calendar-modal .react-datepicker__day-name,
+.calendar-modal .react-datepicker__month-text,
+.calendar-modal-datepicker .react-datepicker__day,
+.calendar-modal-datepicker .react-datepicker__day-name,
+.calendar-modal-datepicker .react-datepicker__month-text {
+    border-radius: 6px !important;
+    color: var(--modal-cyan-soft) !important;
+    background: none !important;
+    font-size: 0.93em;
+    min-width: 1.85em;
+    min-height: 1.85em;
+    line-height: 1.85em;
+    margin: 0.07em !important;
+    padding: 0 !important;
+}
+.calendar-modal .react-datepicker__day--disabled,
+.calendar-modal-datepicker .react-datepicker__day--disabled {
+    color: #888 !important;
+    background: none !important;
+    pointer-events: none !important;
+    opacity: 0.5 !important;
+    filter: grayscale(0.5);
+}
+.calendar-modal .react-datepicker__day--selected,
+.calendar-modal .react-datepicker__day--keyboard-selected,
+.calendar-modal-datepicker .react-datepicker__day--selected,
+.calendar-modal-datepicker .react-datepicker__day--keyboard-selected {
+    background: linear-gradient(90deg, #164e63 0%, #20e3b2 100%) !important;
+    color: #fff !important;
+    font-weight: 900 !important;
+    text-shadow:
+            0 1px 8px #111,
+            0 1px 0 #111,
+            0 0 2px #fff;
+    border: none !important;
+    box-shadow: 0 2px 8px 0 rgba(32,227,178,0.11);
+    z-index: 2;
+}
+.calendar-modal .react-datepicker__day--today,
+.calendar-modal-datepicker .react-datepicker__day--today {
+    border-bottom: 1.2px solid var(--modal-cyan-soft) !important;
+    color: var(--modal-cyan) !important;
+}
+.calendar-modal .react-datepicker__day:hover,
+.calendar-modal-datepicker .react-datepicker__day:hover {
+    background: var(--modal-btn-gradient-hover) !important;
+    color: #fff !important;
+    text-shadow: 0 1px 8px #111, 0 1px 0 #111;
+}
+.calendar-modal .react-datepicker__navigation,
+.calendar-modal-datepicker .react-datepicker__navigation {
+    color: var(--modal-cyan-soft) !important;
+    min-width: 26px;
+    min-height: 26px;
+    font-size: 0.95em;
+}
+.calendar-modal .react-datepicker__navigation:focus,
+.calendar-modal-datepicker .react-datepicker__navigation:focus {
+    outline: none !important;
+}
+.calendar-modal .react-datepicker__navigation:hover,
+.calendar-modal-datepicker .react-datepicker__navigation:hover {
+    background: rgba(32,227,178,0.09) !important;
+}
+.calendar-modal .react-datepicker__triangle,
+.calendar-modal-datepicker .react-datepicker__triangle {
+    display: none !important;
+}
+
+.calendar-modal .react-datepicker__close-icon,
+.calendar-input-with-icon .react-datepicker__close-icon {
+    display: none !important;
+}
+
+@media (max-width: 1100px) {
+    .calendar-modal .modal-content {
+        padding: 26px 6vw 22px 6vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .calendar-modal .modal-content {
+        min-width: 0;
+        max-width: 96vw;
+        padding: 20px 4vw 20px 4vw;
+        border-radius: 10px !important;
+    }
+    .calendar-modal .modal-title {
+        font-size: 1.1rem;
+    }
+    .calendar-modal .cosmic-btn {
+        min-height: 34px;
+        font-size: 0.98rem;
+    }
+    .calendar-modal .react-datepicker__input-container input {
+        font-size: 0.95rem;
+        min-height: 34px;
+    }
+    .calendar-modal-datepicker,
+    .calendar-modal .react-datepicker,
+    .calendar-modal .react-datepicker-popper {
+        border-radius: 8px !important;
+        font-size: 0.98em;
+        min-width: 0;
+        width: 100vw;
+    }
+    .calendar-modal .react-datepicker__day,
+    .calendar-modal .react-datepicker__day-name,
+    .calendar-modal .react-datepicker__month-text,
+    .calendar-modal-datepicker .react-datepicker__day,
+    .calendar-modal-datepicker .react-datepicker__day-name,
+    .calendar-modal-datepicker .react-datepicker__month-text {
+        min-width: 1.6em;
+        min-height: 1.6em;
+        line-height: 1.6em;
+    }
+}

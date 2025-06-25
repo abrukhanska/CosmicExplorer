@@ -1,0 +1,38 @@
+.mars-gallery-bar-input {
+    display: block;
+    width: 240px;
+    min-width: 0;
+    max-width: 270px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 1.09em;
+    font-weight: 600;
+    color: #20e3b2;
+    letter-spacing: 0.01em;
+    background: rgba(34,36,54,0.98);
+    border: 2px solid #20e3b2;
+    border-radius: 10px;
+    height: 44px;
+    padding: 0.45em 1.1em;
+    margin: 0;
+    transition: border 0.18s, color 0.14s, background 0.13s, box-shadow 0.13s;
+    outline: none;
+    box-shadow: 0 2px 8px 0 #20e3b220;
+}
+
+.mars-gallery-bar-input:focus {
+    border: 2px solid #A784E6;
+    background: #23233b;
+    color: #A784E6;
+}
+
+@media (max-width: 900px) {
+    .mars-gallery-bar-input {
+        width: 100%;
+        max-width: 100%;
+        font-size: 0.97em;
+        height: 39px;
+        border-radius: 7px;
+        padding: 0.29em 0.7em;
+    }
+}

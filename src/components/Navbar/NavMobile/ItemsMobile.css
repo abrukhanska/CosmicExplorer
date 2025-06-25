@@ -1,0 +1,48 @@
+.mobile-menu-item {
+    width: 100%;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.mobile-menu-link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    padding: 18px 24px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #22224a;
+    background: transparent;
+    transition: background 0.2s;
+    box-sizing: border-box;
+}
+
+.mobile-menu-link:hover {
+    background: #23235a;
+}
+
+.mobile-menu-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    background: #fff;
+}
+
+.mobile-menu-planet-name {
+    flex: 0 1 auto;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff;
+    font-size: 1.1rem;
+}
+.mobile-menu-spacer {
+    flex-grow: 1;
+}

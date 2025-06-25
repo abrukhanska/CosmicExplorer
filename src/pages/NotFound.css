@@ -1,0 +1,65 @@
+.dsx-404-root {
+    min-height: 100vh;
+    width: 100vw;
+    background: radial-gradient(ellipse at 60% 40%, #222b44 60%, #0b1021 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.dsx-404-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0;
+}
+
+.dsx-404-glow {
+    color: #35ffe5;
+    text-shadow: 0 0 16px #3fd3ff, 0 0 36px #35ffe5;
+    font-family: 'Montserrat', 'Arial', sans-serif;
+}
+
+.dsx-404-content h1.dsx-404-glow {
+    font-size: 7rem;
+    margin: 0;
+    font-weight: 900;
+}
+
+.dsx-404-content h2.dsx-404-glow {
+    font-size: 2.3rem;
+    margin: 12px 0 20px 0;
+    font-weight: 700;
+}
+
+.dsx-404-desc {
+    color: #c1f4f9;
+    font-size: 1.25rem;
+    margin-bottom: 32px;
+    line-height: 1.5;
+    font-family: 'Montserrat', 'Arial', sans-serif;
+}
+
+.dsx-404-btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #18f1c7 60%, #4386fa 100%);
+    color: #fff;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 28px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    box-shadow: 0 2px 16px 4px #0afae7a1;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+.dsx-404-btn:hover {
+    background: linear-gradient(90deg, #4386fa 60%, #18f1c7 100%);
+    box-shadow: 0 2px 24px 8px #35ffe57c;
+}

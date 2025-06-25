@@ -1,0 +1,9 @@
+<svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+    <defs>
+        <radialGradient id="planetMain" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#8bb6fa"/>
+            <stop offset="100%" stop-color="#4e80c9"/>
+        </radialGradient>
+    </defs>
+    <circle cx="12" cy="12" r="11" fill="url(#planetMain)" />
+</svg>0

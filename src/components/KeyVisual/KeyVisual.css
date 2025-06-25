@@ -1,0 +1,60 @@
+.solar-bg {
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: linear-gradient(180deg, #070724, #131446 98%);
+    z-index: 1;
+}
+.sun-core {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: url("../../assets/images/sun.png");
+    background-size: cover;
+    box-shadow:
+            0 0 30px 5px #ffe29a,
+            0 0 60px 20px #ffbd00;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+}
+
+.asteroid-belt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    opacity: 0.7;
+    overflow: hidden;
+    border: none;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    animation: belt-spin 180s linear infinite;
+}
+.asteroid-belt::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: -120px -80px 0 -102px #fff2,
+    122px -18px 0 -105px #fff4,
+    -88px 69px 0 -103px #fff9,
+    21px -110px 0 -105px #fff7,
+    71px 72px 0 -104px #fff8,
+    26px 40px 0 -104px #fff9;
+    transform: translate(-50%, -50%);
+}
+@keyframes belt-spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg);}
+    100% { transform: translate(-50%, -50%) rotate(-360deg);}
+}
