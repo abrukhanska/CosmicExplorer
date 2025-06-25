@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Polyline, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "./ISS.css";
 import ISSMarker from "../components/ISSMarker";
-import {getISSData} from "../api/ISSapi";
+import { getISSData } from "../api/ISSapi";
 
 const TAIL_LENGTH = 60;
 
@@ -70,26 +70,30 @@ const ISS = () => {
     return (
         <div className="iss-tracker__container">
             <main className="iss-tracker__map">
-                <MapContainer
-                    center={issData ? [issData.latitude, issData.longitude] : [0, 0]}
-                    zoom={3}
-                    minZoom={2}
-                    maxZoom={6}
-                    style={{ height: "100%", width: "100%" }}
-                    zoomControl={false}
-                    attributionControl={false}
-                >
-                    <TileLayer
-                        url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
-                        attribution="&copy; <a href='https://carto.com/attributions'>CARTO</a> &copy; <a href='https://openstreetmap.org'>OpenStreetMap</a> contributors"
-                    />
-                    {issData && (
-                        <ISSPath
-                            position={[issData.latitude, issData.longitude]}
-                            path={tail}
+                <div style={{ position: "relative", height: "100%", width: "100%" }}>
+                    <MapContainer
+                        center={issData ? [issData.latitude, issData.longitude] : [0, 0]}
+                        zoom={3}
+                        minZoom={2}
+                        maxZoom={6}
+                        style={{ height: "100%", width: "100%" }}
+                        zoomControl={false}
+                        attributionControl={false}
+                    >
+                        <TileLayer
+                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                            attribution="&copy; <a href='https://openstreetmap.org'>OpenStreetMap</a> contributors"
                         />
-                    )}
-                </MapContainer>
+                        {issData && (
+                            <ISSPath
+                                position={[issData.latitude, issData.longitude]}
+                                path={tail}
+                            />
+                        )}
+                        {/* Напівтемний overlay всередині MapContainer, ПІСЛЯ TileLayer, але ПЕРЕД ISSPath */}
+                        <div className="iss-dark-overlay" />
+                    </MapContainer>
+                </div>
             </main>
             <aside className="iss-tracker__sidebar">
                 <h2 className="iss-tracker__title">Орбітальна станція</h2>

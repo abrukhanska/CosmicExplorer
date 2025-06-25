@@ -193,3 +193,18 @@
         font-size: 1.09rem;
     }
 }
+.iss-tracker__container {
+    display: flex;
+    min-height: 100vh;
+    background: #161a22;
+    color: #eaf6fb;
+}
+
+.iss-tracker__map {
+    flex: 7 1 0;
+    min-width: 0;
+    height: 100vh;
+    border-right: 2px solid #212431;
+    position: relative;
+    z-index: 1;
+}
